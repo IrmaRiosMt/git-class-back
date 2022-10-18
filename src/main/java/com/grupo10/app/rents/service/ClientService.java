@@ -44,7 +44,9 @@ public class ClientService {
             clientToUpdate = client;
             clientToUpdate.setMessages(currentClient.get().getMessages());
             clientToUpdate.setReservations(currentClient.get().getReservations());
+            clientToUpdate.setAge(currentClient.get().getAge());
             clientToUpdate=repository.save(clientToUpdate);
+            
         }
         return clientToUpdate;
     }
